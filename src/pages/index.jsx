@@ -41,7 +41,7 @@ export default function Home() {
       <>
          <Head>
             <title>お昼ごはん決めて偉い-ChatGPTを添えて-</title>
-            <meta name='description' content=' お昼ごはん決めて偉い' />
+            <meta name='description' content='お昼ごはん決めて偉い' />
             <meta name='viewport' content='width=device-width, initial-scale=1' />
             <link rel='icon' href='/favicon.ico' />
          </Head>
@@ -53,7 +53,7 @@ export default function Home() {
                </div>
             ) : (
                <form onSubmit={handleSubmit} className={styles.formWrapper}>
-                  <h1>お昼ごはん決めて偉い</h1>
+                  <h1>今日のお昼ごはん</h1>
                   <p>今日の予算は？</p>
                   <select name='price' onChange={handleChange}>
                      <option value='500'>500円</option>
