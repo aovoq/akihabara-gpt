@@ -10,12 +10,14 @@ export default function Home() {
    })
    const [result, setResult] = useState('')
    const [loading, setLoading] = useState(false)
+   const [error, setError] = useState('')
 
    const handleChange = (e) => {
       setInput({ ...input, [e.target.name]: e.target.value })
    }
 
    const getResult = async (text) => {
+    try {
       const res = await fetch('/api/gpt', {
          method: 'POST',
          headers: {
@@ -27,6 +29,11 @@ export default function Home() {
       console.log(data)
       setResult(data.content)
       setLoading(false)
+    } catch (error) {
+      console.log(error)
+      setLoading(false)
+      setError(error)
+    }
    }
 
    const handleSubmit = (e) => {
@@ -77,6 +84,7 @@ export default function Home() {
                   </select>
                   <button type='submit' disabled={loading}>教えて！</button>
                   {loading && <p>お待ちください...</p>}
+                  <p>{error}</p>
                </form>
             )}
          </main>
