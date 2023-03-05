@@ -1,0 +1,25 @@
+.container {
+  font-family: sans-serif;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.formWrapper {
+  max-width: 300px;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formWrapper select {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+}
+
+.formWrapper button {
+  padding: 5px 0;
+}
