@@ -8,7 +8,7 @@ const handler = async (req, res) => {
    const openai = new OpenAIApi(configuration)
 
    const completion = await openai.createChatCompletion({
-      model: 'gpt-3.5-turbo',
+      model: 'gpt-3.5-turbo-0301',
       messages: [{ role: 'user', content: req.body.text }],
    })
    // console.log(completion.data.choices[0].message)
